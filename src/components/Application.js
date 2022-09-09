@@ -60,8 +60,8 @@ export default function Application(props) {
   // const state = { day: "Monday", days: [] };
   // setState({ ...state, day: "Tuesday" });
 
-const setDays = (days) => setState(prev => ({ ...prev, days }));
-const setDay = day => setState({ ...state, day });
+  const setDays = (days) => setState(prev => ({ ...prev, days }));
+  const setDay = day => setState({ ...state, day });
 
   useEffect(() => {
     const testURL = `http://localhost:8001/api/days`
