@@ -29,3 +29,22 @@ export function getInterview(state, interview) {
   }
   return storeInterviewData;
 }
+
+
+export function getInterviewersForDay(state, day) {
+  let interviewerArray = [];
+
+  state.days.forEach(dayObject => {
+    if (day === dayObject.name) {
+      for (let dayObjectIterator of dayObject.interviewers) {
+        Object.values(state.interviewers).forEach(findInterviewer => {
+          if (findInterviewer.id === dayObjectIterator) {
+            interviewerArray.push(findInterviewer);
+          }
+        })
+      }
+    }
+  })
+  // console.log(interviewerArray)
+  return interviewerArray;
+}
