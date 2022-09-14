@@ -22,6 +22,26 @@ export default function () {
     })
   }, []);
 
+  const updateSpots = function (state, appointments, id) {
+    
+    let spots = 0;
+    
+    const index = state.days.findIndex(dayIterator => dayIterator.name === state.day);
+    const dayObject = state.days[index];
+
+    for (const id of dayObject.appointments) {
+
+      const appointment = appointments[id];
+
+      if (!appointment.interview) {
+        spots++
+      }
+    }
+    const day = { ...dayObject, spots }
+    const days = state.days.map(dayIterator => dayIterator.name === state.day ? day : dayIterator)
+
+    return days;
+  }
 
   function bookInterview(id, interview) {
     const appointment = {
@@ -41,7 +61,8 @@ export default function () {
 
     return axios.put(`/api/appointments/${id}`, { interview })
       .then(() => {
-        setState({ ...state, appointments })
+        const days = updateSpots(state, appointments);
+        setState({ ...state, appointments, days })
       })
   }
 
@@ -60,7 +81,8 @@ export default function () {
 
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
-        setState({ ...state, appointments })
+        const days = updateSpots(state, appointments);
+        setState({ ...state, appointments, days })
       })
   }
 

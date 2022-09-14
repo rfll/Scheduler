@@ -33,7 +33,6 @@ export default function Appointment(props) {
       student: name,
       interviewer
     };
-
     transition(SAVING);
 
     props
@@ -41,6 +40,7 @@ export default function Appointment(props) {
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true));
   }
+  
 
   function cancel() {
     transition(DELETING, true)
