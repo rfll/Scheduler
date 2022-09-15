@@ -40,7 +40,7 @@ export default function Appointment(props) {
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true));
   }
-  
+
 
   function cancel() {
     transition(DELETING, true)
@@ -53,7 +53,9 @@ export default function Appointment(props) {
   }
 
   return (
-    <article className="appointment">
+    <article
+      className="appointment"
+      data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
@@ -78,8 +80,8 @@ export default function Appointment(props) {
           onSave={save}
           onCancel={back}
         />}
-      {mode === SAVING && <Status message='Saving appointment...' />}
-      {mode === DELETING && <Status message='Deleting appointment...' />}
+      {mode === SAVING && <Status message='Saving' />}
+      {mode === DELETING && <Status message='Deleting' />}
       {mode === CONFIRM &&
         <Confirm
           message="Are you sure you want to delete your appointment?"
