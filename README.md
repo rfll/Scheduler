@@ -1,5 +1,9 @@
 # Interview Scheduler
 
+Interview Scheduler is a single page application built using React, Webpack, and Babel. 
+
+Data is persisted by the API server using a PostgreSQL database. Testing was completed using Jest and Cypress.
+
 
 ## Screenshots
 
@@ -24,7 +28,12 @@ Delete an Appointment
 
 ## Setup
 
+###### Scheduler API Setup
+Setup the scheduler server https://github.com/lighthouse-labs/scheduler-api
+
+###### Interview Scheduler Setup
 Install dependencies with `npm install`.
+
 
 ## Running Webpack Development Server
 
@@ -36,6 +45,12 @@ npm start
 
 ```sh
 npm test
+```
+
+## Running Cypress Test Framework
+
+```sh
+npm run cypress
 ```
 
 ## Running Storybook Visual Testbed
