@@ -3,8 +3,8 @@
 
 ## Screenshots
 
-Monday Appointments
-!["Monday Appointments"](https://github.com/rfll/Scheduler/blob/master/docs/Monday%20Appointments.png)
+Appointments
+!["Monday Appointments"](https://github.com/rfll/Scheduler/blob/master/docs/Monday%20Appointments.png)!["Friday Appointments"](https://github.com/rfll/Scheduler/blob/master/docs/Hover%20options.png)
 
 
 ## Setup
