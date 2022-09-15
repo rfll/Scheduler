@@ -1,8 +1,10 @@
 # Interview Scheduler
 
-Interview Scheduler is a single page application built using React, Webpack, and Babel. 
+Interview Scheduler is a single page application(SPA) built using React, Webpack, and Babel.
 
-Data is persisted by the API server using a PostgreSQL database. Testing was completed using Jest and Cypress.
+Users can book interviews between Monday to Friday. Interviews are booked by typing in a student name and clicking on an interviewer from a list of available interviewers. Interviews can be edited, deleted and cancelled.
+
+Data is persisted by the API server using a PostgreSQL database. Testing was completed using Storybook, Jest, and Cypress.
 
 
 ## Screenshots
@@ -16,7 +18,7 @@ Hover Effect - Display Booked Appointment Options
 Book an Appointment
 !["Book an Appointment"](https://github.com/rfll/Scheduler/blob/master/docs/Book%20an%20appointment.png)
 
-Enter Appointment Information and Edit Information
+Enter Appointment Information and Edit Appointment
 !["Enter and Edit"](https://github.com/rfll/Scheduler/blob/master/docs/Enter%20info:Edit.png)
 
 Booked Appointment
@@ -28,10 +30,10 @@ Delete an Appointment
 
 ## Setup
 
-###### Scheduler API Setup
+#### Scheduler API Setup
 Setup the scheduler server https://github.com/lighthouse-labs/scheduler-api
 
-###### Interview Scheduler Setup
+#### Interview Scheduler Setup
 Install dependencies with `npm install`.
 
 

@@ -13,7 +13,7 @@ export function getAppointmentsForDay(state, day) {
     }
   })
   return appointmentArray;
-}
+};
 
 
 export function getInterview(state, interview) {
@@ -28,7 +28,7 @@ export function getInterview(state, interview) {
     }
   }
   return storeInterviewData;
-}
+};
 
 
 export function getInterviewersForDay(state, day) {
@@ -45,6 +45,5 @@ export function getInterviewersForDay(state, day) {
       }
     }
   })
-  // console.log(interviewerArray)
   return interviewerArray;
-}
+};

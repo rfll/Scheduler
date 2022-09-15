@@ -39,18 +39,18 @@ export default function Appointment(props) {
       .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true));
-  }
+  };
 
 
   function cancel() {
-    transition(DELETING, true)
+    transition(DELETING, true);
 
     props.cancelInterview(props.id)
       .then(() => {
         transition(EMPTY)
       })
-      .catch(error => transition(ERROR_DELETE, true))
-  }
+      .catch(error => transition(ERROR_DELETE, true));
+  };
 
   return (
     <article
@@ -100,4 +100,4 @@ export default function Appointment(props) {
         />}
     </article>
   )
-}
+};

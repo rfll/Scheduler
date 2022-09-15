@@ -23,9 +23,9 @@ export default function () {
   }, []);
 
   const updateSpots = function (state, appointments, id) {
-    
+
     let spots = 0;
-    
+
     const index = state.days.findIndex(dayIterator => dayIterator.name === state.day);
     const dayObject = state.days[index];
 
@@ -87,4 +87,4 @@ export default function () {
   }
 
   return { state, setDay, bookInterview, cancelInterview }
-}
+};

@@ -2,7 +2,6 @@ import React from "react";
 
 import "components/Application.scss";
 import DayList from "./DayList";
-// import "components/Appointment";
 import Appointment from "components/Appointment";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
@@ -65,4 +64,4 @@ export default function Application(props) {
       </section>
     </main>
   );
-}
+};
