@@ -4,7 +4,9 @@ import DayListItem from "./DayListItem";
 export default function DayList(props) {
   const daysArrayIterator = props.days.map(day => {
     return (
-      <ul key={day.id}>
+      <ul 
+      key={day.id}
+      data-testid="day">
         <DayListItem
           name={day.name}
           spots={day.spots}
