@@ -30,10 +30,10 @@ Delete an Appointment
 
 ## Setup
 
-#### Scheduler API Setup
+### Scheduler API Setup
 Setup the scheduler server https://github.com/lighthouse-labs/scheduler-api
 
-#### Interview Scheduler Setup
+### Interview Scheduler Setup
 Install dependencies with `npm install`.
 
 
